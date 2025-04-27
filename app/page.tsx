@@ -23,13 +23,13 @@ export default function Home() {
             <h2 className="text-xl text-gray-600 mb-6">Web Developer & Designer</h2>
             <div className="prose max-w-none">
               <p>
-                Hello! I'm Omar, a passionate web developer and designer with expertise in creating modern,
+                Hello! I&apos;m Omar, a passionate web developer and designer with expertise in creating modern,
                 user-friendly websites and applications. With over 5 years of experience in the industry, I specialize
                 in React, Next.js, and responsive design.
               </p>
               <p>
                 
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
+                When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects,
                 or enjoying outdoor activities.
               </p>
             </div>
