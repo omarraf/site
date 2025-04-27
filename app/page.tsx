@@ -75,7 +75,7 @@ export default function Home() {
 
 // Projects and Blog Section Component
 function ProjectsBlogSection() {
-  const [activeTab, setActiveTab] = useState("projects")
+  // const [activeTab, setActiveTab] = useState("projects")
 
   const projects = [
     {
