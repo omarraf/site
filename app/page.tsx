@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import { CalendarIcon, Clock, Github, Linkedin, Mail, Twitter, ExternalLink } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -75,7 +74,6 @@ export default function Home() {
 
 // Projects and Blog Section Component
 function ProjectsBlogSection() {
-  // const [activeTab, setActiveTab] = useState("projects")
 
   const projects = [
     {
