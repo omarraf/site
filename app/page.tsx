@@ -6,10 +6,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { blogPosts } from './data/blog-posts'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         {/* Profile Section */}
         <section className="mb-16 flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -19,16 +20,15 @@ export default function Home() {
 
           <div className="flex-1">
             <h1 className="text-4xl font-bold mb-2">Omar R</h1>
-            <h2 className="text-xl text-gray-600 mb-6">Web Developer & Designer</h2>
+            <h2 className="text-xl text-muted-foreground mb-6">Web Developer & Designer</h2>
             <div className="prose max-w-none">
               <p>
-                Hello! I&apos;m Omar, a passionate web developer and designer with expertise in creating modern,
+                Hello! I'm Omar, a passionate web developer and designer with expertise in creating modern,
                 user-friendly websites and applications. With over 5 years of experience in the industry, I specialize
                 in React, Next.js, and responsive design.
               </p>
               <p>
-                
-                When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects,
+                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
                 or enjoying outdoor activities.
               </p>
             </div>
@@ -58,14 +58,9 @@ export default function Home() {
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
-            <Button variant="outline" size="icon" asChild>
-              <a href="https://twitter.com/omarraf" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </a>
-            </Button>
           </div>
 
-          <p className="text-gray-600">Feel free to reach out for collaborations or just a friendly chat!</p>
+          <p className="text-muted-foreground">Feel free to reach out for collaborations or just a friendly chat!</p>
         </section>
       </div>
     </main>
@@ -74,7 +69,6 @@ export default function Home() {
 
 // Projects and Blog Section Component
 function ProjectsBlogSection() {
-
   const projects = [
     {
       id: 1,
@@ -110,33 +104,6 @@ function ProjectsBlogSection() {
     },
   ]
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Getting Started with Next.js 13",
-      excerpt: "Learn how to set up your first Next.js 13 project with the new App Router.",
-      date: "April 15, 2023",
-      readTime: "5 min read",
-      link: "#",
-    },
-    {
-      id: 2,
-      title: "The Power of Tailwind CSS",
-      excerpt: "Discover how Tailwind CSS can streamline your styling workflow and improve productivity.",
-      date: "March 22, 2023",
-      readTime: "7 min read",
-      link: "#",
-    },
-    {
-      id: 3,
-      title: "Building Accessible Web Applications",
-      excerpt: "Best practices for creating web applications that are accessible to everyone.",
-      date: "February 10, 2023",
-      readTime: "10 min read",
-      link: "#",
-    },
-  ]
-
   return (
     <section className="mb-16">
       <Tabs defaultValue="projects" className="w-full">
@@ -151,7 +118,6 @@ function ProjectsBlogSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project) => (
               <Card key={project.id} className="overflow-hidden h-full flex flex-col">
-                
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
@@ -191,18 +157,22 @@ function ProjectsBlogSection() {
             {blogPosts.map((post) => (
               <Card key={post.id}>
                 <CardHeader>
-                  <CardTitle>{post.title}</CardTitle>
-                  <CardDescription>{post.excerpt}</CardDescription>
+                  <CardTitle>
+                    <a href={`/blog/${post.id}`} className="hover:text-primary transition-colors">
+                      {post.title}
+                    </a>
+                  </CardTitle>
+                  <CardDescription>{post.description}</CardDescription>
                 </CardHeader>
                 <CardFooter>
-                  <div className="flex items-center text-sm text-gray-500 gap-4">
+                  <div className="flex items-center text-sm text-muted-foreground gap-4">
                     <div className="flex items-center">
                       <CalendarIcon className="mr-1 h-4 w-4" />
-                      {post.date}
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="mr-1 h-4 w-4" />
-                      {post.readTime}
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      })}
                     </div>
                   </div>
                 </CardFooter>
