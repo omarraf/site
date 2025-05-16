@@ -19,17 +19,14 @@ export default function Home() {
           </div>
 
           <div className="flex-1">
-            <h1 className="text-4xl font-bold mb-2">Omar R</h1>
-            <h2 className="text-xl text-muted-foreground mb-6">Web Developer & Designer</h2>
+            <h1 className="text-4xl font-bold mb-2">Omar Rafiq</h1>
+            <h2 className="text-xl text-muted-foreground mb-6">Software Engineer</h2>
             <div className="prose max-w-none">
               <p>
-                Hello! I'm Omar, a passionate web developer and designer with expertise in creating modern,
-                user-friendly websites and applications. With over 5 years of experience in the industry, I specialize
-                in React, Next.js, and responsive design.
+                Hi. I like to build things. Interested in machine learning, full-stack dev and contributing to open source.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                or enjoying outdoor activities.
+                When I'm not coding, you can find me playing basketball, reading a book, or at the gym.
               </p>
             </div>
           </div>
@@ -44,7 +41,7 @@ export default function Home() {
 
           <div className="flex justify-center gap-4 mb-8">
             <Button variant="outline" size="icon" asChild>
-              <a href="mailto:omar@example.com" aria-label="Email">
+              <a href="mailto:omarrafiqq@gmail.com" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </a>
             </Button>
