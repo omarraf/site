@@ -1,64 +1,20 @@
 "use client"
 
-import Image from "next/image"
 import { CalendarIcon, Clock, Github, Linkedin, Mail, Twitter, ExternalLink } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { blogPosts } from './data/blog-posts'
+import { AnimatedProfile } from "./components/AnimatedProfile"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
-        {/* Profile Section */}
-        <section className="mb-16 flex flex-col md:flex-row items-center md:items-start gap-8">
-          <div className="w-48 h-48 relative rounded-full overflow-hidden flex-shrink-0 border-4 border-gray-100 shadow-lg">
-            <Image src="/omarraf.jpg?height=192&width=192" alt="Omar R" fill className="object-cover" priority />
-          </div>
-
-          <div className="flex-1">
-            <h1 className="text-4xl font-bold mb-2">Omar Rafiq</h1>
-            <h2 className="text-xl text-muted-foreground mb-6">Software Engineer</h2>
-            <div className="prose max-w-none">
-              <p>
-                Hi. I like to build things. Interested in machine learning, full-stack dev and contributing to open source.
-              </p>
-              <p>
-                When I'm not coding, you can find me playing basketball, reading a book, or at the gym.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Projects/Blog Section */}
+        <AnimatedProfile />
         <ProjectsBlogSection />
-
-        {/* Contact Section */}
-        <section className="text-center">
-          <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
-
-          <div className="flex justify-center gap-4 mb-8">
-            <Button variant="outline" size="icon" asChild>
-              <a href="mailto:omarrafiqq@gmail.com" aria-label="Email">
-                <Mail className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <a href="https://github.com/omarraf" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <a href="https://linkedin.com/in/omarrafiq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
-          </div>
-
-          <p className="text-muted-foreground">Feel free to reach out for collaborations or just a friendly chat!</p>
-        </section>
+        <ContactSection />
       </div>
     </main>
   )
@@ -178,6 +134,35 @@ function ProjectsBlogSection() {
           </div>
         </TabsContent>
       </Tabs>
+    </section>
+  )
+}
+
+// Contact Section Component
+function ContactSection() {
+  return (
+    <section className="text-center">
+      <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
+
+      <div className="flex justify-center gap-4 mb-8">
+        <Button variant="outline" size="icon" asChild>
+          <a href="mailto:omar@example.com" aria-label="Email">
+            <Mail className="h-5 w-5" />
+          </a>
+        </Button>
+        <Button variant="outline" size="icon" asChild>
+          <a href="https://github.com/omarraf" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <Github className="h-5 w-5" />
+          </a>
+        </Button>
+        <Button variant="outline" size="icon" asChild>
+          <a href="https://linkedin.com/in/omarrafiq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Linkedin className="h-5 w-5" />
+          </a>
+        </Button>
+      </div>
+
+      <p className="text-muted-foreground">Feel free to reach out for collaborations or just a friendly chat!</p>
     </section>
   )
 }
