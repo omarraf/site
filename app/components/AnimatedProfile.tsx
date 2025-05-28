@@ -133,14 +133,27 @@ export function AnimatedProfile() {
           transition={{ delay: 0.7, duration: 0.5 }}
         >
           <p>
-            Hello! I'm Omar, a passionate web developer and designer with expertise in creating modern,
-            user-friendly websites and applications. With over 5 years of experience in the industry, I specialize
-            in React, Next.js, and responsive design.
+            hello, im omar! I like to code, play basketball and read books. interested in AI/ML, full-stack development, and contributing to open source projects.
           </p>
-          <p>
-            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-            or enjoying outdoor activities.
-          </p>
+          <p className="text-lg text-muted-foreground font-bold"> currently:</p>
+          <ul className="list-disc list-inside">
+              <li>
+              doing research in human computer interaction and AI to track health and wellness
+              </li>
+              <li>
+                contributing to open source projects like <a href="https://github.com/openenergydashboard " className="text-blue-500">Open Energy Dashboard </a> 
+                and <a href="https://github.com/freecodecamp " className="text-blue-500">FreeCodeCamp</a>
+              </li>
+          </ul>
+          <p className="text-lg text-muted-foreground font-bold"> previously:</p>
+          <ul className="list-disc list-inside">
+            <li>
+              swe intern at <a href="https://themasjidapp.org/" className="text-blue-500">The Masjid App</a>
+              <li>
+                swe micro intern at CodeDay Labs
+              </li>
+            </li>
+          </ul>
         </motion.div>
       </div>
     </section>
