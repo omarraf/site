@@ -146,7 +146,7 @@ function ContactSection() {
 
       <div className="flex justify-center gap-4 mb-8">
         <Button variant="outline" size="icon" asChild>
-          <a href="mailto:omar@example.com" aria-label="Email">
+          <a href="mailto:omarrafiqq@gmail.com" aria-label="Email">
             <Mail className="h-5 w-5" />
           </a>
         </Button>
