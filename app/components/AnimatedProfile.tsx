@@ -42,9 +42,7 @@ const roles = [
   "Open Source Contributor",
   "Problem Solver",
   "Tech Enthusiast",
-  "Him",
-  "Derrick Rose fan",
-  "clippers fan :("
+  
 ];
 
 export function AnimatedProfile() {

@@ -13,7 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <AnimatedProfile />
-        <ProjectsBlogSection />
+        
         <ContactSection />
       </div>
     </main>
