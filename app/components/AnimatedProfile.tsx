@@ -1,48 +1,30 @@
 'use client';
 
 import Image from "next/image";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const nameVariants = {
+const fadeInUp = {
   initial: { opacity: 0, y: 20 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    }
-  },
-  hover: {
-    scale: 1.05,
-    textShadow: "0 0 8px rgb(255,255,255)",
-    transition: {
-      duration: 0.3,
-      ease: "easeInOut"
-    }
-  }
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 }
 };
 
-const letterVariants = {
-  initial: { opacity: 0, y: 20 },
-  animate: (i: number) => ({
-    opacity: 1,
-    y: 0,
+const staggerContainer = {
+  animate: {
     transition: {
-      delay: i * 0.1,
-      duration: 0.5,
-      ease: "easeOut"
+      staggerChildren: 0.1
     }
-  })
+  }
 };
 
 const roles = [
   "Software Engineer",
   "Open Source Contributor",
   "Problem Solver",
-  "Tech Enthusiast",
-  
+  "Researcher",
 ];
 
 export function AnimatedProfile() {
@@ -63,7 +45,7 @@ export function AnimatedProfile() {
           setTimeout(() => {
             setIsDeleting(true);
             setIsWaiting(false);
-          }, 2000); // Wait 2 seconds before starting to delete
+          }, 2000);
         }
       } else if (isDeleting) {
         if (displayText.length > 0) {
@@ -73,47 +55,42 @@ export function AnimatedProfile() {
           setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
         }
       }
-    }, isDeleting ? 50 : 150); // Faster deletion, slower typing
+    }, isDeleting ? 50 : 150);
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, isWaiting, currentRoleIndex]);
 
   return (
-    <section className="mb-16 flex flex-col md:flex-row items-center md:items-start gap-8">
+    <motion.div 
+      className="flex flex-col md:flex-row items-center justify-center gap-16 max-w-4xl mx-auto"
+      variants={staggerContainer}
+      initial="initial"
+      animate="animate"
+    >
       <motion.div 
-        className="w-48 h-48 relative rounded-full overflow-hidden flex-shrink-0 border-4 border-gray-100 shadow-lg"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="w-64 h-64 relative rounded-full overflow-hidden flex-shrink-0 border-4 border-gray-100 shadow-lg"
+        variants={fadeInUp}
       >
-        <Image src="/omarraf.jpg?height=192&width=192" alt="Omar R" fill className="object-cover" priority />
+        <Image 
+          src="/omarraf.jpg?height=256&width=256" 
+          alt="Omar R" 
+          fill 
+          className="object-cover" 
+          priority 
+        />
       </motion.div>
 
-      <div className="flex-1">
+      <div className="flex-1 text-center md:text-left">
         <motion.h1 
-          className="text-4xl font-bold mb-2"
-          variants={nameVariants}
-          initial="initial"
-          animate="animate"
-          whileHover="hover"
+          className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
+          variants={fadeInUp}
         >
-          {name.split("").map((letter, i) => (
-            <motion.span
-              key={i}
-              custom={i}
-              variants={letterVariants}
-              className="inline-block"
-              style={{ marginRight: letter === " " ? "0.3em" : "0" }}
-            >
-              {letter}
-            </motion.span>
-          ))}
+          {name}
         </motion.h1>
+        
         <motion.h2 
-          className="text-xl text-muted-foreground mb-6 min-h-[1.5em]"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-2xl text-muted-foreground mb-6 min-h-[1.5em]"
+          variants={fadeInUp}
         >
           {displayText}
           <motion.span
@@ -124,36 +101,41 @@ export function AnimatedProfile() {
             |
           </motion.span>
         </motion.h2>
+
         <motion.div 
           className="prose max-w-none"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
+          variants={fadeInUp}
         >
-          <p>
-            hello, im omar! I like to code, play basketball and read books. interested in AI/ML, full-stack development, and contributing to open source projects.
+          <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+            Pursuing a bachelors in Computer Science at California State University, Fullerton.
+             I'm interested in full-stack development and contributing to open source
           </p>
-          <p className="text-lg text-muted-foreground font-bold"> currently:</p>
-          <ul className="list-disc list-inside">
-              <li>
-              doing research in human computer interaction and AI to track health and wellness
-              </li>
-              <li>
-                contributing to open source projects like <a href="https://github.com/openenergydashboard " className="text-blue-500">Open Energy Dashboard </a> 
-                and <a href="https://github.com/freecodecamp " className="text-blue-500">FreeCodeCamp</a>
-              </li>
-          </ul>
-          <p className="text-lg text-muted-foreground font-bold"> previously:</p>
-          <ul className="list-disc list-inside">
-            <li>
-              swe intern at <a href="https://themasjidapp.org/" className="text-blue-500">The Masjid App</a>
-              <li>
-                swe micro intern at CodeDay Labs
-              </li>
-            </li>
-          </ul>
+          <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+            In my free time I enjoy playing basketball, reading books, and learning new things. Feel free to reach out if you have any questions or want to collaborate on a project!
+          </p>
+
+          <motion.div 
+            className="flex justify-center md:justify-start gap-4"
+            variants={fadeInUp}
+          >
+            <Button variant="outline" size="icon" asChild className="hover:scale-110 transition-transform">
+              <a href="mailto:omarrafiqq@gmail.com" aria-label="Email">
+                <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild className="hover:scale-110 transition-transform">
+              <a href="https://github.com/omarraf" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Github className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild className="hover:scale-110 transition-transform">
+              <a href="https://linkedin.com/in/omarrafiq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 } 

@@ -47,6 +47,59 @@ module.exports = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            strong: {
+              color: theme('colors.foreground'),
+            },
+            code: {
+              backgroundColor: theme('colors.muted.DEFAULT'),
+              color: theme('colors.foreground'),
+              padding: '0.2em 0.4em',
+              borderRadius: '0.25rem',
+              fontWeight: 'normal',
+              display: 'inline',
+              fontSize: '0.875em',
+              lineHeight: '1.5',
+            },
+            'code::before': { content: '""' },
+            'code::after': { content: '""' },
+            'p code': {
+              display: 'inline',
+              whiteSpace: 'normal',
+            },
+            'pre code': {
+              display: 'block',
+              whiteSpace: 'pre',
+            },
+          },
+        },
+        dark: {
+          css: {
+            strong: {
+              color: theme('colors.foreground'),
+            },
+            code: {
+              backgroundColor: theme('colors.muted.DEFAULT'),
+              color: theme('colors.foreground'),
+              display: 'inline',
+              fontSize: '0.875em',
+              lineHeight: '1.5',
+            },
+            'code::before': { content: '""' },
+            'code::after': { content: '""' },
+            'p code': {
+              display: 'inline',
+              whiteSpace: 'normal',
+            },
+            'pre code': {
+              display: 'block',
+              whiteSpace: 'pre',
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [require('@tailwindcss/typography')],
