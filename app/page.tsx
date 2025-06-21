@@ -158,7 +158,7 @@ const projects = [
     description: "Web app that allows users to track their daily time spent on various activities and visualize the data in a chart.",
     tags: ["Typescript", "React", "Chart.js", "Firebase"],
     sourceCode: "https://github.com/omarraf/time-tracker",
-    liveDemo: "https://time-tracker-qdcw.vercel.app/",
+    liveDemo: "https://www.daychart.fyi/",
     image: "/images/daychart.png",
   },
 ]
