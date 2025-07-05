@@ -108,7 +108,7 @@ export function AnimatedProfile() {
         >
           <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
             Pursuing a bachelors in Computer Science at California State University, Fullerton.
-             I'm interested in full-stack development and contributing to open source
+             I'm interested in full-stack development and contributing to open source projects.
           </p>
           <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
             In my free time I enjoy playing basketball, reading books, and learning new things. Feel free to reach out if you have any questions or want to collaborate on a project!
