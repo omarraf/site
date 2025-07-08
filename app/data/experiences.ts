@@ -34,15 +34,15 @@ export const experiences: Experience[] = [
   {
     id: "research-project-2024",
     title: "10-Week Research Project",
-    description: "An intensive research experience exploring [your research topic] over 10 weeks, documenting the complete journey from initial hypothesis to findings.",
+    description: "An intensive research experience exploring HCI + LLM for family health management",
     type: "research",
     status: "ongoing",
-    startDate: "2024-12-01", // Adjust to your actual start date
+    startDate: "2025-05-26", 
     duration: "10 weeks",
-    organization: "California State University, Fullerton",
-    location: "Fullerton, CA",
-    tags: ["Research", "Data Analysis", "Academic Writing", "Methodology"],
-    image: "/images/research-hero.jpg", // Add your research image
+    organization: "UIOWA",
+    location: "Iowa City, IA",
+    tags: ["Research", "Data Analysis", "Human-Computer Interaction", "LLM", "AI"],
+    image: "/images/research-hero.jpg", 
     overview: `
 This 10-week research project represents my first deep dive into academic research. I'm exploring [describe your research topic and goals here]. 
 
