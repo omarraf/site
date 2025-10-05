@@ -29,7 +29,7 @@ export default async function BlogPost({ params }: Props) {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <main className="max-w-2xl mx-auto px-6 py-16">
+      <main className="max-w-4xl mx-auto px-6 py-16">
         <article>
           <header className="mb-8">
             <h1 className="text-2xl font-medium mb-4">{post.title}</h1>

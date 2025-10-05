@@ -15,12 +15,12 @@ export function Navigation() {
 
   return (
     <header className="w-full px-6 py-8">
-      <div className="max-w-4xl mx-auto flex items-center justify-between">
+      <div className="flex items-center gap-6">
         <Link href="/" className="hover:opacity-80 transition-opacity">
-          <h1 className="text-primary font-bold text-lg tracking-wide">OMAR RAFIQ</h1>
+          <h1 className="font-bold text-lg tracking-wide" style={{ color: '#54422b', fontFamily: '"VT323", monospace' }}>OMAR RAFIQ</h1>
         </Link>
 
-        <nav className="flex gap-8">
+        <nav className="flex gap-4">
           {navItems.map((item) => {
             const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))
 
@@ -28,7 +28,7 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm transition-colors ${
+                className={`text-base transition-colors ${
                   isActive ? "text-foreground underline" : "text-muted-foreground hover:text-foreground"
                 }`}
               >

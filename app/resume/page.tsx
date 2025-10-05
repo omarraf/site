@@ -3,10 +3,10 @@ import { Navigation } from "@/components/navigation"
 export default function ResumePage() {
   const experience = [
     {
-      title: "Senior Product Designer",
-      company: "TechCorp",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: "Software Developer and Researcher",
+      company: "Unviersity of Iowa",
+      location: "Iowa City, IA",
+      period: "May 2025 - Present",
       description: "Leading design system initiatives and product strategy for enterprise software serving 50k+ users.",
       achievements: [
         "Designed and implemented company-wide design system, reducing development time by 40%",
@@ -15,8 +15,8 @@ export default function ResumePage() {
       ],
     },
     {
-      title: "Product Designer",
-      company: "StartupXYZ",
+      title: "Open Source Contributor",
+      company: "Open Energy Dashboard, FreeCodeCamp, TensorZero",
       location: "Remote",
       period: "2020 - 2022",
       description: "Full-stack design role covering user research, interface design, and front-end development.",
@@ -47,13 +47,13 @@ export default function ResumePage() {
         {/* Contact */}
         <div className="mb-12">
           <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-            <a href="mailto:hello@omarrafiq.dev" className="hover:text-red-500 transition-colors">
-              hello@omarrafiq.dev
+            <a href="mailto:omarrafiqq@gmail.com" className="hover:text-red-500 transition-colors">
+              omarrafiqq@gmail.com
             </a>
             <span>•</span>
-            <span>San Francisco, CA</span>
+            <span>Orange County, CA</span>
             <span>•</span>
-            <span>Available for freelance</span>
+            <span>Open to work</span>
           </div>
         </div>
 
@@ -61,9 +61,7 @@ export default function ResumePage() {
         <div className="mb-12">
           <h2 className="text-lg font-medium mb-4">Summary</h2>
           <p className="text-gray-700 leading-relaxed">
-            Senior Product Designer and Full-Stack Developer with 6+ years of experience creating user-centered digital
-            experiences. Proven track record of leading design system initiatives, improving user satisfaction metrics,
-            and bridging the gap between design and development teams.
+            Software Engineer with experience in full-stack development and a passion for building user-centric applications. Skilled in React, TypeScript, and design systems. Adept at collaborating with cross-functional teams to deliver high-quality software solutions.
           </p>
         </div>
 
