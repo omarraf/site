@@ -122,7 +122,6 @@
 
 /* Custom prose styles for blog posts */
 .prose {
-  max-width: 65ch;
   color: rgb(55 65 81);
   line-height: 1.75;
 }
@@ -172,12 +171,14 @@
   margin-bottom: 1.25rem;
   margin-top: 1.25rem;
   padding-left: 1.625rem;
+  list-style-type: disc;
 }
 
 .prose ol {
   margin-bottom: 1.25rem;
   margin-top: 1.25rem;
   padding-left: 1.625rem;
+  list-style-type: decimal;
 }
 
 .prose li {

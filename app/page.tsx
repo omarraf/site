@@ -9,9 +9,9 @@ export default function Home() {
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto py-16">
           <div className="mb-12">
             <img
-              src="/personal-illustration.png"
+              src="/omar3.jpg"
               alt="Illustration of person with glasses reading a book with basketball nearby"
-              className="w-80 h-60 object-contain"
+              className="w-80 h-60 object-contain rounded-full"
             />
           </div>
 
