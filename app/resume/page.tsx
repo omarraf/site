@@ -70,9 +70,9 @@ export default function ResumePage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <main className="max-w-2xl mx-auto px-6 py-16">
-        <div className="flex justify-between items-center mb-12">
-          <h1 className="text-2xl font-medium">resume</h1>
+      <main className="max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-16">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 sm:mb-12">
+          <h1 className="text-xl sm:text-2xl font-medium">resume</h1>
           <a
             href="/resume.pdf"
             download="Omar_Rafiq_Resume.pdf"
@@ -83,14 +83,14 @@ export default function ResumePage() {
         </div>
 
         {/* Contact */}
-        <div className="mb-12">
-          <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+        <div className="mb-8 sm:mb-12">
+          <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600">
             <a href="mailto:omarrafiqq@gmail.com" className="hover:text-red-500 transition-colors">
               omarrafiqq@gmail.com
             </a>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Orange County, CA</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Open to work</span>
           </div>
         </div>
@@ -104,40 +104,40 @@ export default function ResumePage() {
         </div>
 
         {/* Education */}
-        <div className="mb-12">
-          <h2 className="text-lg font-medium mb-6">Education</h2>
-          <div className="flex justify-between items-start mb-2">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-base sm:text-lg font-medium mb-4 sm:mb-6">Education</h2>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
             <div>
-              <h3 className="font-medium">{education.school}</h3>
-              <p className="text-gray-600">{education.degree}</p>
+              <h3 className="font-medium text-sm sm:text-base">{education.school}</h3>
+              <p className="text-gray-600 text-sm">{education.degree}</p>
             </div>
-            <span className="text-sm text-gray-500 font-mono">{education.graduation}</span>
+            <span className="text-xs sm:text-sm text-gray-500 font-mono">{education.graduation}</span>
           </div>
-          <p className="text-sm text-gray-700 mt-2">
+          <p className="text-xs sm:text-sm text-gray-700 mt-2">
             <span className="font-medium">Relevant Coursework: </span>
             {education.coursework.join(", ")}
           </p>
         </div>
 
         {/* Experience */}
-        <div className="mb-12">
-          <h2 className="text-lg font-medium mb-6">Experience</h2>
-          <div className="space-y-8">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-base sm:text-lg font-medium mb-4 sm:mb-6">Experience</h2>
+          <div className="space-y-6 sm:space-y-8">
             {experience.map((job, index) => (
               <div key={index}>
-                <div className="flex justify-between items-start mb-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
                   <div>
-                    <h3 className="font-medium">{job.title}</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-medium text-sm sm:text-base">{job.title}</h3>
+                    <p className="text-gray-600 text-xs sm:text-sm">
                       {job.company} • {job.location}
                     </p>
                   </div>
-                  <span className="text-sm text-gray-500 font-mono">{job.period}</span>
+                  <span className="text-xs sm:text-sm text-gray-500 font-mono">{job.period}</span>
                 </div>
-                <p className="text-gray-700 text-sm mb-3">{job.description}</p>
+                <p className="text-gray-700 text-xs sm:text-sm mb-3">{job.description}</p>
                 <ul className="space-y-1">
                   {job.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="text-sm text-gray-700">
+                    <li key={achIndex} className="text-xs sm:text-sm text-gray-700">
                       • {achievement}
                     </li>
                   ))}
@@ -148,13 +148,13 @@ export default function ResumePage() {
         </div>
 
         {/* Skills */}
-        <div className="mb-12">
-          <h2 className="text-lg font-medium mb-6">Skills</h2>
-          <div className="space-y-4">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-base sm:text-lg font-medium mb-4 sm:mb-6">Skills</h2>
+          <div className="space-y-3 sm:space-y-4">
             {Object.entries(skills).map(([category, skillList]) => (
               <div key={category}>
-                <h3 className="font-medium mb-2">{category}</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="font-medium mb-2 text-sm sm:text-base">{category}</h3>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {skillList.map((skill, index) => (
                     <span key={index} className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded">
                       {skill}
@@ -167,21 +167,21 @@ export default function ResumePage() {
         </div>
 
         {/* Leadership */}
-        <div className="mb-12">
-          <h2 className="text-lg font-medium mb-6">Leadership</h2>
-          <div className="space-y-8">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-base sm:text-lg font-medium mb-4 sm:mb-6">Leadership</h2>
+          <div className="space-y-6 sm:space-y-8">
             {leadership.map((role, index) => (
               <div key={index}>
-                <div className="flex justify-between items-start mb-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
                   <div>
-                    <h3 className="font-medium">{role.title}</h3>
-                    <p className="text-gray-600">{role.organization}</p>
+                    <h3 className="font-medium text-sm sm:text-base">{role.title}</h3>
+                    <p className="text-gray-600 text-xs sm:text-sm">{role.organization}</p>
                   </div>
-                  <span className="text-sm text-gray-500 font-mono">{role.period}</span>
+                  <span className="text-xs sm:text-sm text-gray-500 font-mono">{role.period}</span>
                 </div>
                 <ul className="space-y-1">
                   {role.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="text-sm text-gray-700">
+                    <li key={achIndex} className="text-xs sm:text-sm text-gray-700">
                       • {achievement}
                     </li>
                   ))}
