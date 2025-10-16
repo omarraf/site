@@ -83,7 +83,7 @@ A real-time platform for monitoring and analyzing global conflicts using AI-powe
   {
     title: "Web Crawler",
     slug: "web-crawler",
-    summary: "Comprehensive component library and design tokens for scaling design across teams",
+    summary: "High-performance distributed web crawler for efficient data extraction and indexing",
     year: "2023",
     tags: ["Go", "Gin", "PostgreSQL", "Redis"],
     description: `
