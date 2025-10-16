@@ -2,7 +2,7 @@ import { Navigation } from "@/components/navigation"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
       <main className="max-w-4xl mx-auto px-6">
@@ -17,9 +17,9 @@ export default function Home() {
 
           {/* Bio text */}
           <div className="space-y-4">
-            <p className="text-foreground text-base leading-relaxed">
-              I'm a Software Engineer with experience building softwarel spanning from research projects, non-profit orgs and open source software. 
-              I aim to build stuff used by real people that solve real problems. 
+            <p className="text-gray-900 text-base leading-relaxed">
+              I'm a Software Engineer with experience building softwarel spanning from research projects, non-profit orgs and open source software.
+              I aim to build stuff used by real people that solve real problems.
               Currently a CS major aimed to graduate in May 2026.
               Feel free to reach out, whether it's to discuss tech or recommend a good book!
             </p>
@@ -29,7 +29,7 @@ export default function Home() {
           <div className="flex gap-6 mt-16 text-sm">
             <a
               href="mailto:omarrafiqq@gmail.com"
-              className="text-muted-foreground hover:text-foreground transition-colors underline"
+              className="text-gray-600 hover:text-gray-900 transition-colors underline"
             >
               email
             </a>
@@ -37,7 +37,7 @@ export default function Home() {
               href="https://github.com/omarraf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors underline"
+              className="text-gray-600 hover:text-gray-900 transition-colors underline"
             >
               github
             </a>
@@ -45,7 +45,7 @@ export default function Home() {
               href="https://twitter.com/omarraf10"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors underline"
+              className="text-gray-600 hover:text-gray-900 transition-colors underline"
             >
               twitter
             </a>
@@ -53,7 +53,7 @@ export default function Home() {
               href="https://linkedin.com/in/omarrafiq"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors underline"
+              className="text-gray-600 hover:text-gray-900 transition-colors underline"
             >
               linkedin
             </a>

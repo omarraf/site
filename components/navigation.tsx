@@ -29,7 +29,7 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={`text-base transition-colors ${
-                  isActive ? "text-foreground underline" : "text-muted-foreground hover:text-foreground"
+                  isActive ? "text-gray-900 underline" : "text-gray-600 hover:text-gray-900"
                 }`}
               >
                 {item.label}
