@@ -78,7 +78,7 @@ export default function ResumePage() {
             download="Omar_Rafiq_Resume.pdf"
             className="text-sm text-gray-500 hover:text-red-500 transition-colors cursor-pointer"
           >
-            download pdf
+            .
           </a>
         </div>
 
