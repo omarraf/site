@@ -74,11 +74,12 @@ export default function ResumePage() {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 sm:mb-12">
           <h1 className="text-xl sm:text-2xl font-medium">resume</h1>
           <a
-            href="/resume.pdf"
-            download="Omar_Rafiq_Resume.pdf"
+            href="/Omar_Rafiq_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-gray-500 hover:text-red-500 transition-colors cursor-pointer"
           >
-            .
+            View resume
           </a>
         </div>
 
