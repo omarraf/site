@@ -79,6 +79,7 @@ A real-time platform for monitoring and analyzing global conflicts using AI-powe
     images: [],
     videos: [],
     github: "https://github.com/omarraf/conflict-tracker",
+    demo: "https://conflictlog.vercel.app/",
   },
   {
     title: "Web Crawler",
@@ -98,6 +99,7 @@ A high-performance web crawler built with Go for efficient data extraction and i
     `,
     images: [],
     videos: [],
+    github: "https://github.com/omarraf/web-crawler"
   },
 ]
 
