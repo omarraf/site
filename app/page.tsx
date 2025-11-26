@@ -41,14 +41,6 @@ export default function Home() {
               github
             </a>
             <a
-              href="https://twitter.com/omarraf10"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors underline"
-            >
-              twitter
-            </a>
-            <a
               href="https://linkedin.com/in/omarrafiq"
               target="_blank"
               rel="noopener noreferrer"
