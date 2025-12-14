@@ -8,7 +8,6 @@ const projects = [
     title: "Transport Planner",
     slug: "transport-planner",
     summary: "Full-stack web app for planning eco-friendly routes",
-    year: "2025",
     tags: ["TypeScript", "React", "Express", "PostgreSQL", "Docker"],
     description: `
 ## Overview
@@ -41,7 +40,6 @@ One of the main challenges was integrating multiple transport APIs and normalizi
     title: "AI Story Generator",
     slug: "ai-story-generator",
     summary: "Fully automated story generation using GPT-4 ",
-    year: "2025",
     tags: ["LLMs", "Python", "FastAPI", "Next.js"],
     description: `
 ## Overview
@@ -64,7 +62,6 @@ The backend is built with Python and FastAPI, leveraging OpenAI's GPT-4 API. The
     title: "Global Conflict Tracker",
     slug: "conflict-tracker",
     summary: "AI-powered platform for real-time monitoring of global conflicts",
-    year: "2025",
     tags: ["AI", "Next.js", "Node.js", "MongoDB"],
     description: `
 ## Overview
@@ -85,7 +82,6 @@ A real-time platform for monitoring and analyzing global conflicts using AI-powe
     title: "Web Crawler",
     slug: "web-crawler",
     summary: "High-performance distributed web crawler for efficient data extraction and indexing",
-    year: "2023",
     tags: ["Go", "Gin", "PostgreSQL", "Redis"],
     description: `
 ## Overview
@@ -103,8 +99,9 @@ A high-performance web crawler built with Go for efficient data extraction and i
   },
 ]
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug)
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const project = projects.find((p) => p.slug === slug)
 
   if (!project) {
     notFound()
@@ -119,7 +116,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="mb-12">
           <div className="flex justify-between items-start mb-4">
             <h1 className="text-3xl font-medium">{project.title}</h1>
-            <span className="text-sm text-gray-500 font-mono">{project.year}</span>
           </div>
           <p className="text-lg text-gray-700 mb-4">{project.summary}</p>
           <div className="flex flex-wrap gap-2 mb-6">

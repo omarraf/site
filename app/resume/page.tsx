@@ -12,7 +12,7 @@ export default function ResumePage() {
     {
       title: "Software Developer & Researcher",
       company: "University of Iowa",
-      location: "Iowa City, IA -> Remote",
+      location: "Iowa City, IA",
       period: "May 2025 – Dec 2025",
       description: "Building software and researching LLMs related to health tracking for families.",
       achievements: [
@@ -91,18 +91,11 @@ export default function ResumePage() {
             </a>
             <span className="hidden sm:inline">•</span>
             <span>Orange County, CA</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Open to work</span>
           </div>
         </div>
 
         {/* Summary */}
-        <div className="mb-12">
-          <h2 className="text-lg font-medium mb-4">Summary</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Software Engineer with experience building projects used by thousands of people.
-          </p>
-        </div>
+        
 
         {/* Education */}
         <div className="mb-8 sm:mb-12">

@@ -11,7 +11,6 @@ export function Navigation() {
   const navItems = [
     { href: "/thoughts", label: "thoughts" },
     { href: "/projects", label: "projects" },
-    { href: "/currently", label: "currently" },
     { href: "/resume", label: "resume" },
   ]
 
