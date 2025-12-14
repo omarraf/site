@@ -18,9 +18,9 @@ export default function Home() {
           {/* Bio text */}
           <div className="space-y-4 px-2">
             <p className="text-gray-900 text-sm sm:text-base leading-relaxed">
-              I'm a Software Engineer with experience building software spanning for research projects, non-profit orgs and open source software.
-              I aim to build stuff used by real people that solve real problems.
-              Feel free to reach out!
+              I'm a current CS Major with experience building software spanning from research projects, non-profit orgs and open source projects.
+              Currently focused on system design, ai and cloud computing.
+              I'm always open to chat, so feel free to reach out!
             </p>
           </div>
 
