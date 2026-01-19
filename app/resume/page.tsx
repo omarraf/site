@@ -10,10 +10,10 @@ export default function ResumePage() {
 
   const experience = [
     {
-      title: "Software Developer & Researcher",
+      title: "Research Engineer",
       company: "University of Iowa",
       location: "Iowa City, IA",
-      period: "May 2025 – Dec 2025",
+      period: "May 2025 – Present",
       description: "Building software and researching LLMs related to health tracking for families.",
       achievements: [
         "Engineered distributed health data pipeline (Java/Kotlin) for real-time sync across 50+ users",
@@ -72,7 +72,7 @@ export default function ResumePage() {
 
       <main className="max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-16">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 sm:mb-12">
-          <h1 className="text-xl sm:text-2xl font-medium">resume</h1>
+          <h1 className="text-xl sm:text-2xl font-medium">experience</h1>
           <a
             href="/Omar_Rafiq_Resume.pdf"
             target="_blank"
@@ -115,7 +115,7 @@ export default function ResumePage() {
 
         {/* Experience */}
         <div className="mb-8 sm:mb-12">
-          <h2 className="text-base sm:text-lg font-medium mb-4 sm:mb-6">Experience</h2>
+          <h2 className="text-base sm:text-lg font-medium mb-4 sm:mb-6">Work</h2>
           <div className="space-y-6 sm:space-y-8">
             {experience.map((job, index) => (
               <div key={index}>
