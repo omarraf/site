@@ -9,7 +9,7 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navItems = [
-    { href: "/thoughts", label: "thoughts" },
+    { href: "/blog", label: "blog" },
     { href: "/projects", label: "projects" },
     { href: "/resume", label: "experience" },
   ]

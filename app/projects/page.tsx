@@ -12,11 +12,12 @@ export default function ProjectsPage() {
       demo: "https://transport-planner-ruddy.vercel.app/",
     },
     {
-      title: "AI Story Generator",
-      slug: "ai-story-generator",
-      summary: "Fully automated story generation using GPT-4 ",
-      tags: ["LLMs", "Python", "FastAPI", "Next.js"],
-      github: "https://github.com/omarraf/story-generator",
+      title: "Daychart",
+      slug: "daychart",
+      summary: "Open-source web application for planning and visualizing your day",
+      tags: ["TypeScript", "React", "Next.js"],
+      github: "https://github.com/omarraf/time-tracker",
+      demo: "https://daychart.fyi",
     },
     {
       title: "Global Conflict Tracker",
@@ -32,6 +33,13 @@ export default function ProjectsPage() {
       summary: "Scalable web crawler for data extraction and analysis",
       tags: ["Go", "Gin", "PostgreSQL", "Redis"],
       github: "https://github.com/omarraf/web-crawler",
+    },
+    {
+      title: "Event Driven Ticketing System",
+      slug: "ticketing-system",
+      summary: "A serverless event ticketing platform built with AWS services",
+      tags: ["Python", "AWS", "Cloud"],
+      github: "https://github.com/omarraf/ticketing-system",
     },
   ]
 

@@ -5,8 +5,6 @@ excerpt: "My first open source contribution to the Open Energy Dashboard"
 tags: ["open-source", "development", "sustainability", "testing"]
 ---
 
-# Small Contributions, Sustainable Impacts
-
 ## Introduction
 
 This past month, I had the chance to contribute to the Open Energy Dashboard (OED)
@@ -33,8 +31,8 @@ researchers who need to track and analyze energy consumption data. For example, 
 campus could use OED to monitor energy usage across diﬀerent buildings, identify
 ineﬃciencies, and implement strategies to reduce their carbon footprint.
 
-<!-- ![Initial view of the dashboard](/images/oed_initial.png "Initial view of the dashboard.")
-![bar graph](/images/oed_bar_graph.png "Bar graph displaying energy consumption for dorm floors in kWh") -->
+![Initial view of the dashboard](/oed_initial.png "Initial view of the dashboard.")
+![bar graph](/oed_demo.png "Bar graph displaying energy consumption for dorm floors in kWh") 
 
 ## The Issue
 
@@ -72,6 +70,9 @@ implemented features.
 - **Docker Containers:** Encapsulate the application components for consistent deployment
 across various environments.
 
+![Workflow of OED](/OED-Workflow.png "OED Workflow")
+
+
 
 ## Solution
 
@@ -90,7 +91,7 @@ energy usage from kilowatt-hours (kWh) to megajoules (MJ).
 To verify the test, I ran it within the Docker environment, and all tests, including BG9, passed
 successfully. Below is a screenshot showing the test results:
 
-<!-- ![Test results passing in Docker](/images/docker_results.png "Test results passing in Docker") -->
+![Test results passing in Docker](/tests_passing_oed.png "Test results passing in Docker")
 
 You can view the [pull request here](https://github.com/OpenEnergyDashboard/OED/pull/1365).
 

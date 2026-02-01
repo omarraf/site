@@ -56,10 +56,10 @@ export default async function BlogPost({ params }: Props) {
 
         <nav className="mt-12 pt-8 border-t border-gray-200">
           <a
-            href="/thoughts"
+            href="/blog"
             className="text-gray-500 hover:text-gray-700 transition-colors"
           >
-            ← Back to thoughts
+            ← Back to blog
           </a>
         </nav>
       </main>
