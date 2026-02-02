@@ -97,4 +97,4 @@ You can view the [pull request here](https://github.com/OpenEnergyDashboard/OED/
 
 ## Conclusion
 
-Contributing to OED was a fulfilling experience. I learned how to work in a large open-source project, follow community standards, and meaningfully collaborate. Most importantly, I contributed to a tool used by real people working toward sustainability. Huge thanks to my teammates for making the experience memorable.
+Contributing to OED was a fulfilling experience. I learned how to work in a large open-source project, follow community standards, and meaningfully collaborate. Most importantly, I contributed to a tool used by real people working toward sustainability.
