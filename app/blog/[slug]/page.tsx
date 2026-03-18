@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/navigation"
 import { getPostBySlug, getAllPosts, formatDate } from "@/lib/blog"
 import { markdownToHtml } from "@/lib/markdown"
 import { notFound } from "next/navigation"
@@ -27,8 +26,6 @@ export default async function BlogPost({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
       <main className="max-w-4xl mx-auto px-6 py-16">
         <article>
           <header className="mb-8">

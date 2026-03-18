@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/navigation"
 import { getAllPosts, formatDate } from "@/lib/blog"
 import Link from "next/link"
 
@@ -7,8 +6,6 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
       <main className="max-w-2xl mx-auto px-6 py-16">
         <h1 className="text-2xl font-medium mb-12">blog</h1>
 

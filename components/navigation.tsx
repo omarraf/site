@@ -11,39 +11,35 @@ export function Navigation() {
   const navItems = [
     { href: "/blog", label: "blog" },
     { href: "/projects", label: "projects" },
-    { href: "/resume", label: "experience" },
   ]
 
   return (
-    <header className="w-full px-6 py-8">
-      <div className="flex items-center justify-between">
+    <header className="relative w-full px-6 py-8">
+      <div className="flex items-center gap-6">
         <Link href="/" className="hover:opacity-80 transition-opacity">
-          <h1 className="font-bold text-lg tracking-wide" style={{ color: '#54422b', fontFamily: '"VT323", monospace' }}>OMAR RAFIQ</h1>
+          <h1 className="font-bold text-lg tracking-wide" style={{ color: '#54422b', fontFamily: '"VT323", monospace', textDecoration: 'underline wavy', textDecorationColor: '#54422b', textUnderlineOffset: '4px' }}>OMAR RAFIQ</h1>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-4">
-          {navItems.map((item) => {
-            const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-base transition-colors ${
-                  isActive ? "text-gray-900 underline" : "text-gray-600 hover:text-gray-900"
-                }`}
-              >
-                {item.label}
-              </Link>
-            )
-          })}
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`text-base underline transition-colors ${
+                pathname === item.href || pathname.startsWith(item.href)
+                  ? "text-gray-900"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-gray-600 hover:text-gray-900 transition-colors"
+          className="md:hidden text-gray-600 hover:text-gray-900 transition-colors ml-auto"
           aria-label="Toggle menu"
         >
           <svg
@@ -67,22 +63,20 @@ export function Navigation() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <nav className="md:hidden mt-6 flex flex-col gap-4 pb-4">
-          {navItems.map((item) => {
-            const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`text-base transition-colors ${
-                  isActive ? "text-gray-900 underline" : "text-gray-600 hover:text-gray-900"
-                }`}
-              >
-                {item.label}
-              </Link>
-            )
-          })}
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className={`text-base underline transition-colors ${
+                pathname === item.href || pathname.startsWith(item.href)
+                  ? "text-gray-900"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
       )}
     </header>

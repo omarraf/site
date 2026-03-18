@@ -1,10 +1,6 @@
-import { Navigation } from "@/components/navigation"
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
       <main className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto py-8 sm:py-16">
           <div className="mb-8 sm:mb-12">
@@ -25,7 +21,7 @@ export default function Home() {
           </div>
 
           {/* Social links */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-12 sm:mt-16 text-sm">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-5 text-sm">
             <a
               href="mailto:omarrafiqq@gmail.com"
               className="text-gray-600 hover:text-gray-900 transition-colors underline"
@@ -48,9 +44,20 @@ export default function Home() {
             >
               linkedin
             </a>
+            <a
+              href="/Omar-Rafiq_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors underline"
+            >
+              resume
+            </a>
           </div>
         </div>
       </main>
+      <footer className="fixed bottom-4 left-0 right-0 text-center">
+        <p className="text-gray-300 text-xs">last updated 2/25/26</p>
+      </footer>
     </div>
   )
 }

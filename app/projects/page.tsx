@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/navigation"
 import { Github, ExternalLink } from "lucide-react"
 
 export default function ProjectsPage() {
@@ -45,8 +44,6 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
       <main className="max-w-2xl mx-auto px-6 py-16">
         <h1 className="text-2xl font-medium mb-12">projects</h1>
 

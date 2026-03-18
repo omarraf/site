@@ -5,7 +5,7 @@ import { Source_Sans_3 } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
-import { PageTransition } from "@/components/page-transition"
+import { Navigation } from "@/components/navigation"
 import "./globals.css"
 
 const sourceSans = Source_Sans_3({
@@ -41,9 +41,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <PageTransition>
-            <Suspense fallback={null}>{children}</Suspense>
-          </PageTransition>
+          <Navigation />
+          <Suspense fallback={null}>{children}</Suspense>
           <Analytics />
         </ThemeProvider>
       </body>
