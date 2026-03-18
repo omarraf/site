@@ -43,7 +43,7 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-neutral-950">
       <main className="max-w-2xl mx-auto px-6 py-16">
         <h1 className="text-2xl font-medium mb-12">projects</h1>
 
@@ -53,10 +53,10 @@ export default function ProjectsPage() {
               <div className="flex justify-between items-start mb-2">
                 <h2 className="text-lg font-medium">{project.title}</h2>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-3">{project.summary}</p>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">{project.summary}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                  <span key={tagIndex} className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
                     {tag}
                   </span>
                 ))}
@@ -67,7 +67,7 @@ export default function ProjectsPage() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-red-500 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-red-500 transition-colors"
                   >
                     <Github size={16} />
                     GitHub
@@ -78,7 +78,7 @@ export default function ProjectsPage() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-red-500 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-red-500 transition-colors"
                   >
                     <ExternalLink size={16} />
                     Live Demo

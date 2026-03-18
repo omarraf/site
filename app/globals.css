@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark, .dark *));
+
 
 :root {
   --background: oklch(1 0 0);
@@ -117,7 +119,7 @@
     @apply border-gray-200;
   }
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-white text-gray-900 dark:bg-neutral-950 dark:text-gray-100;
   }
 }
 
@@ -256,3 +258,24 @@
   text-align: center;
   font-style: italic;
 }
+
+/* Site title */
+.site-title {
+  color: #54422b;
+  text-decoration-color: #54422b;
+}
+.dark .site-title {
+  color: #e8b86d;
+  text-decoration-color: #e8b86d;
+}
+
+/* Dark mode prose overrides */
+.dark .prose { color: rgb(243 244 246); }
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose strong { color: rgb(255 255 255); }
+.dark .prose blockquote { color: rgb(209 213 219); border-left-color: rgb(75 85 99); }
+.dark .prose code { background-color: rgb(38 38 38); color: rgb(243 244 246); }
+.dark .prose hr { border-top-color: rgb(64 64 64); }
+.dark .prose figcaption { color: rgb(163 163 163); }
