@@ -45,7 +45,7 @@ export default function Home() {
               linkedin
             </a>
             <a
-              href="/Omar-Rafiq_Resume.pdf"
+              href="/Omar_Rafiq_Resume_5_25_26.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors underline"
@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="fixed bottom-4 left-0 right-0 text-center">
-        <p className="text-gray-300 text-xs">last updated 3/18/26</p>
+        <p className="text-gray-300 text-xs">last updated 5/25/26</p>
       </footer>
     </div>
   )
