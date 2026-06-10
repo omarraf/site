@@ -45,7 +45,7 @@ export default function Home() {
               linkedin
             </a>
             <a
-              href="/Omar_Rafiq_Resume_5_25_26.pdf"
+              href="/Omar_Rafiq_Resume_6-26.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors underline"
