@@ -48,6 +48,8 @@ export default function Home() {
           <span className="muted"> · </span>
           <a href="mailto:omarrafiqq@gmail.com">email</a>
           <span className="muted"> · </span>
+          <a href="https://www.linkedin.com/in/omarrafiq/">linkedin</a>
+          <span className="muted"> · </span>
           <a href="/Omar_Rafiq_Resume_6-26.pdf">resume</a>
         </p>
       </header>
