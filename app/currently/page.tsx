@@ -1,5 +1,3 @@
-import { Navigation } from "@/components/navigation"
-
 export default function CurrentlyPage() {
   const sections = [
     {
@@ -28,9 +26,7 @@ export default function CurrentlyPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-
+    <div className="min-h-screen">
       <main className="max-w-2xl mx-auto px-6 py-16">
         <h1 className="text-2xl font-medium mb-12">currently</h1>
         <div className="space-y-12">

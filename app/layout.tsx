@@ -1,30 +1,17 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Source_Sans_3 } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Navigation } from "@/components/navigation"
 import "./globals.css"
 
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-serif",
-})
-
 export const metadata: Metadata = {
-  title: "Omar Rafiq - Software Engineer",
+  title: "Omar Rafiq",
   description:
-    "Portfolio of Omar Rafiq, a software engineer specializing in scalable full-stack applications and AI-powered tools.",
-  generator: "Next.js",
+    "Omar Rafiq is a software engineer interested in system design, AI, and cloud computing.",
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
 }
 
 export default function RootLayout({
@@ -33,18 +20,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans ${sourceSans.variable} ${inter.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navigation />
-          <Suspense fallback={null}>{children}</Suspense>
-          <Analytics />
-        </ThemeProvider>
+    <html lang="en">
+      <body>
+        {children}
+        <Analytics />
       </body>
     </html>
   )
