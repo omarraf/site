@@ -50,7 +50,7 @@ export default function Home() {
           <span className="muted"> · </span>
           <a href="https://www.linkedin.com/in/omarrafiq/">linkedin</a>
           <span className="muted"> · </span>
-          <a href="/Omar_Rafiq_Resume_6-26.pdf">resume</a>
+          <a href="/Omar_Rafiq_Resume_Nov.pdf">resume</a>
         </p>
       </header>
 
